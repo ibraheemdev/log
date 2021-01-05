@@ -296,6 +296,10 @@ mod serde;
 #[cfg(feature = "kv_unstable")]
 pub mod kv;
 
+pub mod prelude {
+    pub use crate::{log, debug, error, info, trace, warn};
+}
+
 #[cfg(has_atomics)]
 use std::sync::atomic::{AtomicUsize, Ordering};
 
